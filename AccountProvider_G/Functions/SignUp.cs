@@ -51,7 +51,8 @@ public class SignUp(ILogger<SignUp> logger, UserManager<UserAccount> userManager
                         FirstName = urr.FirstName,
                         LastName = urr.LastName,
                         Email = urr.Email,
-                        UserName = urr.Email
+                        UserName = urr.Email,
+                        Created = DateTime.Now,
                     };
 
                     try

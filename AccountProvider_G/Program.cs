@@ -14,7 +14,7 @@ var host = new HostBuilder()
     {
         services.AddApplicationInsightsTelemetryWorkerService();
         services.ConfigureFunctionsApplicationInsights();
-
+        services.AddHttpClient();
         services.AddDbContext<DataContext>(x => x.UseSqlServer(context.Configuration.GetConnectionString("AccountDatabase")));
 
         services.AddIdentity<UserAccount, IdentityRole>(x =>
